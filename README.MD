@@ -1,6 +1,6 @@
 # 基于RBAC 模型框架
 
-本程序fork来自[这里](https://github.com/gaoyaxing24/RBAC)
+本程序fork来自：[这里](https://github.com/gaoyaxing24/RBAC)
 
 将原来系统中的默认数据库由`sqlite3`替换为`MySQL`数据库，详细配置见`settings.py`文件，导出的数据见`data.sql`文件。
 安装依赖：
@@ -17,9 +17,9 @@ python manage.py migrate
 ```
 mysql -uroot -p rbac    # 登录到rabc数据库
 
-mysql>source data.sql       #导入数据
+mysql>source data.sql       # 导入数据
 ```
-
+启动服务：
 ```shell
 python manage.py runserver 0.0.0.0:8000
 ```
