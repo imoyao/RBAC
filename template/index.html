@@ -1,0 +1,26 @@
+{% include "public/header.html" %}
+            <h1>念奴娇·赤壁怀古</h1><br>
+            大江东去，浪淘尽，千古风流人物。<br>
+            故垒西边，人道是，三国周郎赤壁。<br>
+            乱石穿空，惊涛拍岸，卷起千堆雪。<br>
+            江山如画，一时多少豪杰。<br>
+            遥想公瑾当年，小乔初嫁了，雄姿英发。<br>
+            羽扇纶巾，谈笑间，樯橹灰飞烟灭。<br>
+            故国神游，多情应笑我，早生华发。<br>
+            人生如梦，一尊还酹江月。<br>
+
+            <hr />
+
+            <p style="color: red;">{{ index_info }}</p>
+        {% if login_info %}
+            <p style="color: red;">Hello {{ login_info.name }}</p>
+            {% if login_info.is_admin %}
+                <p style="color: red;">你好, 你是管理员, 拥有管理权限</p>
+            {% endif %}
+        {% else %}
+            <h4>您现在尚未登录, 可以使用<a href="javascript:void(0);">http://127.0.0.1:9000{% url 'vlogin' %}?uid=\d</a>伪登录功能登录系统</h4>
+        {% endif%}
+
+             
+
+{% include "public/footer.html" %}
